@@ -18,23 +18,40 @@ public class ejercicio2 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
-        System.out.println("ingrese un numero...");
-        String numero = entrada.nextLine();
+        String numero = "";
+        
+        do {            
+        System.out.println("ingrese un numero de 4 digitos...");
+        numero = entrada.nextLine();    
+        } while (numero.length()!=4);
 
-        System.out.println(numeroMayor(numero));
-
+        System.out.println("Nuevo numero: "+ numeroMayor(numero) + numeroMenor(numero));
     }
 
     public static String numeroMayor(String num) {
         int mayor = 0;
         int num1 = 0;
         for (int i = 0; i < num.length(); i++) {
-            num1= (int)num.charAt(i);
-            if (num1>mayor) {
+            num1 = Character.getNumericValue(num.charAt(i));
+            if (num1 > mayor) {
                 mayor = num1;
             }
         }
         return Integer.toString(mayor);
+    }
+
+    public static String numeroMenor(String num) {
+        int menor = Character.getNumericValue(num.charAt(0));
+        int num1 = 0;
+        for (int i = 0; i < num.length(); i++) {
+            num1 = Character.getNumericValue(num.charAt(i));
+            if (num1 < menor) {
+                menor = num1;
+            }
+        }
+        //String cadena = Integer.toString(num1);
+        //return cadena;
+        return Integer.toString(menor);
     }
 
 }
