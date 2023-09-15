@@ -17,12 +17,39 @@ public class ejercicio4 {
         int num1, num2;
         num1 = 1;
         num2 = 2;
+        float suma = (float) num1 / num2;
+        System.out.println(num1 + "/" + num2);
         for (int i = 0; i < 100; i++) {
-            System.out.println(num1 + "/" + num2);
             num1 = num1 + 2;
             num2 = num2 + 3;
-        
+            System.out.println(num1 + "/" + num2);
+            suma = suma + ((float) num1 / num2);
         }
+        System.out.println("La suma de la serie es: " + suma);
     }
-    
+
 }
+/*
+alternativa 
+
+public class ejercicio4 {
+
+    public static void main(String[] args) {
+        int num1, num2;
+        num1 = 1;
+        num2 = 2;
+        float suma = 0.0f;
+        System.out.println(num1 + "/" + num2);
+
+        for (int i = 0; i < 100; i++) {
+            suma = suma + ((float) num1 / num2);
+            num1 = num1 + 2;
+            num2 = num2 + 3;
+            System.out.println(num1 + "/" + num2);
+        }
+
+        System.out.println("La suma de la serie es: " + suma);
+    }
+}
+
+*/
