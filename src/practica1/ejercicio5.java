@@ -1,25 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package practica1;
-import java.util.Scanner;
-
 /**
  *
  * @author fabio
  */
 public class ejercicio5 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+     
+        int dado1, dado2;
+        int contador = 0;
         
-        Scanner entrada = new Scanner(System.in);
+        do {            
+            dado1 = lanzarDado();
+            dado2 = lanzarDado();
+            contador++;
+        } while (!(dado1 == 6 && dado2 == 6));
+        
+        System.out.println("Lanzamientos efectuados: "+ contador);
+
+    }
+    
+    public static int lanzarDado() {
         double aleatorioBase = Math.random();
-        int aleatorioDado = (int)aleatorioBase*6;
+        int dado = (int) ((aleatorioBase * 6) + 1);
+        return dado;
     }
     
 }
