@@ -1,11 +1,10 @@
 package practica1;
-/**
- *
- * @author fabio
- */
-public class ejercicio5 {
+
+public class Ejercicio5 {
 
     public static void main(String[] args) {
+        
+//      Lanzamiento de dados, hasta que ambos sean iguales a 6
      
         int dado1, dado2;
         int contador = 0;

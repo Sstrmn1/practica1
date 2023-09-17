@@ -2,25 +2,21 @@ package practica1;
 
 import java.util.Scanner;
 
-/**
- *
- * @author HP
- */
-public class ejercicio6 {
 
-    /**
-     * @param args the command line arguments
-     */
+public class Ejercicio6 {
+
+
     public static void main(String[] args) {
+//        Division por restas sucesivas
         Scanner entrada = new Scanner(System.in);
 
         int dividendo, divisor, cociente, residuo;
         cociente = 0;
 
-        System.out.println("Ingrese dividendo...");
+        System.out.println("Ingrese dividendo:");
         dividendo = entrada.nextInt();
         do {
-            System.out.println("Ingrese divisor (distinto de 0)...");
+            System.out.println("Ingrese divisor (distinto de 0):");
             divisor = entrada.nextInt();
         } while (divisor == 0);
 

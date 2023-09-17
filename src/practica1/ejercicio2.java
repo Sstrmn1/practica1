@@ -1,27 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package practica1;
 
 import java.util.Scanner;
 
-/**
- *
- * @author fabio
- */
-public class ejercicio2 {
+public class Ejercicio2 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Forma nuevo numero en base a su menor y mayor digito 
+        
         Scanner entrada = new Scanner(System.in);
         String numero = "";
         
         do {            
-        System.out.println("ingrese un numero de 4 digitos...");
+        System.out.println("Ingrese un numero de 4 digitos:");
         numero = entrada.nextLine();    
         } while (numero.length()!=4);
 
